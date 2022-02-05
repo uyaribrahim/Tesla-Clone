@@ -8,7 +8,7 @@ const CarItem = (props) => {
         <View style={styles.carContainer}>
 
         <ImageBackground
-        source={require('../../assets/images/ModelX.jpeg')}
+        source={require('../../assets/images/ModelS.jpeg')}
         style={styles.image}
         />
 
@@ -17,7 +17,20 @@ const CarItem = (props) => {
           <Text style={styles.subTitle}>Starting at $69,500</Text>
         </View>
         
-       <StyledButton></StyledButton>
+       <StyledButton 
+       type="primary"
+       content={"Custom Order"}
+       onPress = {() => {
+         console.warn('Custom Order was pressed');
+       }}
+       />
+       <StyledButton 
+       type="secondary"
+       content={"EXISTING INVENTORY"}
+       onPress = {() => {
+         console.warn('Existing Inventory was pressed');
+       }}
+       />
 
       </View>
     );
